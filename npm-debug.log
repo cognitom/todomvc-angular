@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/cognitom/.nodebrew/current/bin/npm', 'start' ]
+2 info using npm@2.1.16
+3 info using node@v0.11.14
+4 verbose node symlink /Users/cognitom/.nodebrew/current/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart todomvc-angular-coffee@0.0.1
+7 info start todomvc-angular-coffee@0.0.1
+8 verbose unsafe-perm in lifecycle true
+9 info todomvc-angular-coffee@0.0.1 Failed to exec start script
+10 verbose stack Error: Exit status 1
+10 verbose stack     at EventEmitter.<anonymous> (/Users/cognitom/.nodebrew/node/v0.11.14/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
+10 verbose stack     at EventEmitter.emit (events.js:110:17)
+10 verbose stack     at ChildProcess.<anonymous> (/Users/cognitom/.nodebrew/node/v0.11.14/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1000:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1072:5)
+11 verbose pkgid todomvc-angular-coffee@0.0.1
+12 verbose cwd /Users/cognitom/Git/todomvc-angular
+13 error Darwin 14.0.0
+14 error argv "node" "/Users/cognitom/.nodebrew/current/bin/npm" "start"
+15 error node v0.11.14
+16 error npm  v2.1.16
+17 error code ELIFECYCLE
+18 error todomvc-angular-coffee@0.0.1 start: `gulp watch`
+18 error Exit status 1
+19 error Failed at the todomvc-angular-coffee@0.0.1 start script 'gulp watch'.
+19 error This is most likely a problem with the todomvc-angular-coffee package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     gulp watch
+19 error You can get their info via:
+19 error     npm owner ls todomvc-angular-coffee
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
