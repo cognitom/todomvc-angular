@@ -2,15 +2,15 @@ todoStorage = require '../../lib/todoStorage'
 
 module.exports = ($scope, $location, $filter) ->
   todos = $scope.todos = todoStorage.get()
-
-  $scope.newTodo = ''
   filter = $filter 'filter'
   remaining = filter todos, completed: false
-  $scope.remainingCount = remaining.length
-  $scope.editedTodo = null
 
   $location.path '/' if $location.path() == ''
 
+  $scope.newTodo = ''
+  $scope.remainingCount = remaining.length
+  $scope.allChecked = (remaining.length == 0)
+  $scope.editedTodo = null
   $scope.location = $location
 
   $scope.$watch 'location.path()', (path) ->
@@ -63,6 +63,6 @@ module.exports = ($scope, $location, $filter) ->
     todoStorage.put todos
 
   $scope.markAll = (completed) ->
-    todo.completed = !completed for todo in todos
+    todo.completed = completed for todo in todos
     $scope.remainingCount = todos.length if completed
     todoStorage.put todos
